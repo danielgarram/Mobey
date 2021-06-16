@@ -1,0 +1,7 @@
+{
+  "name": "mobey",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
