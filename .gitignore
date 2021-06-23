@@ -1,0 +1,5 @@
+
+#Serve
+.serve/
+*.pyc
+*/__pycache__/
