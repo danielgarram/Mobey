@@ -8,7 +8,7 @@ export class LoginService {
   constructor(private navCtrl: NavController) {}
 
   async isAuth(): Promise<boolean> {
-    if (true) {
+    if (false) {
       await this.navCtrl.navigateRoot('/login');
       return false;
     }
