@@ -1,0 +1,44 @@
+<ion-content fullscreen>
+  <div class="container">
+    <div class="d-flex justify-content-center py-20">
+      <ion-img src="assets/icon/favicon.png"></ion-img>
+    </div>
+    <div class="d-flex justify-content-center py-20">
+      <span class="w-75">
+        En Mobey te damos la bienvenida a nuestra aplicación que te ayudará a
+        mantener tus finanzas personales, favor de ingresar los datos de tu
+        cuenta, si eres nuevo regístrate.
+      </span>
+    </div>
+    <div class="d-flex justify-content-center w-100 center">
+      <form (ngSubmit)="doLogin(formLogin)" #formLogin="ngForm" class="w-75">
+        <ion-list>
+          <ion-item class="ion-margin-top">
+            <ion-label position="floating">Username</ion-label>
+            <ion-input
+              #emailInput
+              placeholder="username"
+              required="true"
+              type="email"
+              name="username"
+              [(ngModel)]="loginUser.username"
+            ></ion-input>
+          </ion-item>
+          <ion-item class="ion-margin-top">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input
+              #passwordInput
+              placeholder="password"
+              required="true"
+              type="password"
+              name="password"
+              [(ngModel)]="loginUser.password"
+            ></ion-input>
+          </ion-item>
+          <ion-button class="ion-margin-top" type="submit" expand="full">Login</ion-button>
+          <ion-button class="ion-margin-top" expand="full">Sign in</ion-button>
+        </ion-list>
+      </form>
+    </div>
+  </div>
+</ion-content>
