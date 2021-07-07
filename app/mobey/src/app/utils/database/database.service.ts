@@ -82,5 +82,9 @@ export class DatabaseService {
           .catch(e => console.error('error seedDatabase: ', e));
       });
   }
+
+  getDatabase() {
+    return this.database;
+  }
 }
 

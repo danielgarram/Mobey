@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { LangService } from './utils/lang/lang.service';
+import { DatabaseService } from './utils/database/database.service';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +9,16 @@ import { LangService } from './utils/lang/lang.service';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private platform: Platform, private langService: LangService) {
+  constructor(private platform: Platform, 
+              private langService: LangService,
+              private dbService: DatabaseService) {
     this.initializeApp();
   }
 
   private initializeApp() {
     this.platform.ready().then(() => {
       this.langService.init();
+      this.dbService.createDatabase(true);
     });
   }
 }
